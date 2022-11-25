@@ -1,0 +1,141 @@
+@import url('reset.css');
+
+:root {
+    --lime-app-color: #54d154;
+    --white-app-color: #fff;
+    --gray-app-color: #828181;
+    --first-text-font: 'Comic Sans MS'; /* Proxima Nova */
+    --second-text-font: 'Comic Sans MS'; /* Monsterrat */
+    --third-text-font: 'Comic Sans MS'; /* Myriad Pro */
+}
+  
+header {
+  height: 100vh;
+  background: url(../images/headerbg.jpg) center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 0 1em 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    padding: 6px 20px;
+}
+
+#menu li a {
+    font: lighter 1em var(--first-text-font), sans-serif;
+    color: var(--white-app-color);
+    opacity: 85%;
+    padding: 3px 0;
+    margin: 0 0.7vw;
+}
+
+#menu .active {
+    font-weight: bold !important;
+    opacity: 100%;
+}
+
+#search input{
+    font: 1em var(--first-text-font), sans-serif;
+    background: #fffc url(../images/search.svg) 95%/1.4em no-repeat;
+    width: 177px;
+    padding: 0.4em 1em;
+    border-radius: 1em;
+}
+
+h1 {
+    font: 700 2em var(--second-text-font), sans-serif;
+    color: var(--white-app-color);
+    padding: 0.7em 0;
+}
+
+h2 {
+    font: 300 1.25em var(--second-text-font), sans-serif;
+    color: var(--gray-app-color);
+    text-transform: uppercase;
+    padding: 12px
+}
+
+h5 {
+    font: 1em var(--third-text-font), sans-serif;
+    color: var(--gray-app-color);
+    opacity: 80%;
+    padding: 10px;
+}
+
+hr {
+    width: 3em;
+    height: 2px;
+    background-color: #444;
+    margin: auto;
+}
+
+#title > button {
+    font: 1em var(--first-text-font), sans-serif;
+    text-transform: uppercase;
+    background-color: var(--lime-app-color);
+    color: var(--white-app-color);
+    padding: 0.8em 1.5em;
+    border-radius: 1.6em;
+}
+
+#scroll a {
+    font: 1em var(--first-text-font);
+    background: #fffc;
+    color: #444;
+    padding: 0.4em 1em;
+    border-radius: 1em;
+}
+
+main section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+#cols-3 article {
+    padding: 1em;
+}
+
+.iconshape {
+    background: #e1f3e1;
+    border-radius: 30px;
+    height: 140px;
+    width: 140px;
+    margin: auto;
+    display: flex;
+}
+
+.iconshape i {
+    font-size: 4em;
+    margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #menu {
+        padding: 10px 0;
+        display: flex;
+        order: -1;
+    }
+
+    #menu .active {
+        border-top: 5px solid var(--lime-app-color);
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    #cols-3 {
+        display: flex;
+    }
+
+}
